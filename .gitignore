@@ -34,3 +34,7 @@
 # Other
 *.log
 *.vscode/*.log
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/targets.log
+*.vscode/
