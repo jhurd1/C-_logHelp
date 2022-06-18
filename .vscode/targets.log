@@ -10,12 +10,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Jun 17 21:44:08 2022
+# Make data base, printed on Sat Jun 18 07:40:16 2022
 
 # Variables
 
 # automatic
- 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
@@ -44,7 +43,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/fk/9hp7w1pd6fjcf2trjt2fbp4c0000gn/T/vscode-ipc-1a9374c0-524c-4250-810e-c425e6836ccc.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/fk/9hp7w1pd6fjcf2trjt2fbp4c0000gn/T/vscode-ipc-cbd2c1cd-8dcf-4da5-b68d-6e1c0e597b54.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -56,7 +55,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.T3speAPC16/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nJWCaz5qK0/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -80,7 +79,7 @@ VSCODE_CODE_CACHE_PATH = /Users/jamiehurd/Library/Application Support/Code/Cache
 # environment
 LOGNAME = jamiehurd
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -146,7 +145,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1688
+VSCODE_PID = 939
 # variable set hash-table stats:
 # Load=66/1024=6%, Rehash=0, Collisions=1/89=1%
 
@@ -156,9 +155,9 @@ VSCODE_PID = 1688
 
 # Directories
 
-# . (device 16777232, inode 18656803): 15 files, no impossibilities.
+# . (device 16777230, inode 18656803): 18 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -238,7 +237,6 @@ search.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 searchLogic.h:
 #  Implicit rule search has not been done.
@@ -272,6 +270,6 @@ search.o: search.cpp search.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jun 17 21:44:08 2022
+# Finished Make data base on Sat Jun 18 07:40:16 2022
 
  

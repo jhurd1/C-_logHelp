@@ -9,9 +9,9 @@
 int main()
 {
     SearchLogic search;
-    std::string correspPath = search.getcorrespPath();
-    std::string correspStrings = search.getcorrespStrings();
-    std::string stringInFile = search.getStringInFile();
+    std::string correspPath;// = search.getcorrespPath();
+    std::string correspStrings;// = search.getcorrespStrings();
+    std::string stringInFile;// = search.getStringInFile();
 
 
     std::cout << "file path to search: ";

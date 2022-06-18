@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "searchLogic.h"
 #include "search.h"
 
 Search::Search()
