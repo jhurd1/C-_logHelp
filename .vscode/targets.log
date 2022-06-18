@@ -7,18 +7,17 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'
-.  Stop.
+make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Jun 17 20:31:07 2022
+# Make data base, printed on Fri Jun 17 21:44:08 2022
 
 # Variables
 
 # automatic
+ 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
- 
 ?F = $(notdir $?)
 # environment
 VSCODE_LOG_NATIVE = false
@@ -157,9 +156,9 @@ VSCODE_PID = 1688
 
 # Directories
 
-# . (device 16777232, inode 18656803): 12 files, no impossibilities.
+# . (device 16777232, inode 18656803): 15 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -182,6 +181,14 @@ all:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+searchLogic.o: searchLogic.cpp searchLogic.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 17):
+	g++	-c	searchLogic.cpp
+	
+
 # Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
@@ -191,18 +198,18 @@ all:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-17 20:31:07
+#  Last modified 2022-06-17 21:37:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-a.out: search.h search.cpp searchDriver.cpp
+a.out: search.o searchLogic.o searchDriver.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `makefile', line 11):
-	g++	search.cpp	searchDriver.cpp
+	g++	search.o	searchLogic.o	searchDriver.o
 	
 
 # Not a target:
@@ -210,6 +217,14 @@ search.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+searchDriver.o: searchDriver.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 20):
+	g++	-c	searchDriver.cpp
+	
 
 # Not a target:
 search.cpp:
@@ -223,8 +238,29 @@ search.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
+# Not a target:
+searchLogic.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+searchLogic.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+search.o: search.cpp search.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `makefile', line 14):
+	g++ -c	search.cpp
+	
+
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/23=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/33=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -235,8 +271,7 @@ search.cpp:
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
- 
 
-# Finished Make data base on Fri Jun 17 20:31:07 2022
+# Finished Make data base on Fri Jun 17 21:44:08 2022
 
  

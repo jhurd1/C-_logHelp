@@ -7,5 +7,14 @@
 #    et al
 ###############################################################
 
-a.out	:	search.h	search.cpp	searchDriver.cpp
-	g++	search.cpp	searchDriver.cpp
+a.out	:	search.o	searchLogic.o	searchDriver.o
+	g++	search.o	searchLogic.o	searchDriver.o
+
+search.o:	search.cpp	search.h	
+	g++ -c	search.cpp
+
+searchLogic.o:	searchLogic.cpp	searchLogic.h
+	g++	-c	searchLogic.cpp
+
+searchDriver.o:	searchDriver.cpp
+	g++	-c	searchDriver.cpp
