@@ -11,11 +11,12 @@ SearchLogic::SearchLogic(std::string corresppath)
     setcorrespPath(correspPath);
 }
 
-SearchLogic::SearchLogic(std::string correspPath, std::string correspStrings, std::ifstream in)
+SearchLogic::SearchLogic(std::string correspPath, std::string correspStrings, 
+    std::string stringInFile)
 {
     setcorrespPath(correspPath);
     setcorrespStrings(correspStrings);
-    //setIn(in);
+    setStringInFile(stringInFile);
 }
 
 std::string SearchLogic::getcorrespPath() const
@@ -28,22 +29,47 @@ std::string SearchLogic::getcorrespStrings() const
     return correspStrings;
 }
 
+std::string SearchLogic::getStringInFile() const
+{
+    return stringInFile;
+}
+
+
 void SearchLogic::setcorrespPath(std::string correspPath)
 {
-
+    this->correspPath = search.getPath();
 }
 
 void SearchLogic::setcorrespStrings(std::string correspStrings)
 {
-
+    this->correspStrings = search.getStrings();
 }
 
-void SearchLogic::setIn(std::ifstream in)
+void SearchLogic::setStringInFile(std::string stringInFile)
 {
-
+    this->stringInFile = stringInFile;
 }
 
- void SearchLogic::searchLogic(std::string correspPath, std::string correspStrings, std::ifstream stream)
- {
+/*void SearchLogic::setIn(std::ifstream in)
+{
+    //I don't think I need this.
+    //this->in = in;
+}*/
 
+ void SearchLogic::searchLogic(std::string correspPath, std::string correspStrings,
+    std::string stringInFile)
+ {
+    std::ifstream in(correspPath);
+    while(getline(in, correspStrings)&&(!in.eof()))
+    {
+        if(correspStrings == stringInFile)
+        {
+            std::cout << "found a match: " + stringInFile;
+        } else 
+        {
+            std::cout << "no such string, user.";
+        }
+    }
+    std::cin.ignore();
+    std::cin.get();  
  }
