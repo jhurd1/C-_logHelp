@@ -13,7 +13,7 @@
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}/searchDriver.cpp"
             },
             "problemMatcher": [
                 "$gcc"
@@ -36,7 +36,7 @@
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${fileDirname}/searchDriver.cpp"
             },
             "problemMatcher": [
                 "$gcc"

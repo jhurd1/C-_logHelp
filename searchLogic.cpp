@@ -1,4 +1,5 @@
 #include "searchLogic.h"
+#include "search.h"
 
 SearchLogic::SearchLogic()
 {
@@ -60,16 +61,18 @@ void SearchLogic::setStringInFile(std::string stringInFile)
     std::string stringInFile)
  {
     std::ifstream in(correspPath);
-    while(getline(in, correspStrings)&&(!in.eof()))
+    //while(getline(in, correspStrings)&&(!in.eof()))
+    while(getline(in, correspStrings))
     {
+        std::cout << stringInFile << std::endl;
         if(correspStrings == stringInFile)
         {
-            std::cout << "found a match: " + stringInFile;
+            std::cout << "Found a match: " + stringInFile;
         } else 
         {
-            std::cout << "no such string, user.";
+            std::cout << "No such string. ";
         }
     }
     std::cin.ignore();
-    std::cin.get();  
+    std::cin.get();
  }

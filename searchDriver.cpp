@@ -1,6 +1,8 @@
 #include <iostream>
+#include <string>
 
 #include "searchLogic.h"
+#include "search.h"
 
 /****************************************************************
  * Function: main
@@ -29,4 +31,3 @@ int main()
 
    return 0;
 }
-
